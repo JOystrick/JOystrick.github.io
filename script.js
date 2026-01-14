@@ -65,32 +65,20 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe skill cards and timeline items
-document.querySelectorAll('.skill-card, .timeline-item, .contact-card, .project-card, .cert-card').forEach(el => {
+// Observe timeline items, contact cards, project cards, and cert cards
+document.querySelectorAll('.timeline-item, .contact-card, .project-card, .cert-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// Animate skill progress bars on scroll
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBar = entry.target.querySelector('.skill-progress');
-            if (progressBar) {
-                const width = progressBar.style.width;
-                progressBar.style.width = '0%';
-                setTimeout(() => {
-                    progressBar.style.width = width;
-                }, 100);
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-item').forEach(item => {
-    skillObserver.observe(item);
+// Observe skill cards for animations
+document.querySelectorAll('.skill-card, .value-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
 });
 
 // Contact Form Handling
