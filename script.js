@@ -81,42 +81,6 @@ document.querySelectorAll('.skill-card, .value-card').forEach(el => {
     observer.observe(el);
 });
 
-// Contact Form Handling
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Create mailto link (fallback method)
-        const mailtoLink = `mailto:juliao8@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Message Sent!';
-        submitButton.style.backgroundColor = '#10b981';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            submitButton.textContent = originalText;
-            submitButton.style.backgroundColor = '';
-        }, 3000);
-        
-        // Note: For production, integrate with a service like Formspree, EmailJS, or Netlify Forms
-    });
-}
 
 // Resume Download Handler
 const resumeDownload = document.getElementById('resume-download');
