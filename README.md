@@ -70,4 +70,4 @@ This repository is configured for GitHub Pages. Once pushed to the `main` branch
 ## Contact
 
 - Email: juliao8@icloud.com
-- LinkedIn: [Julia Oystrick](https://www.linkedin.com/in/juliaoystrick-9a00b8398)
+- LinkedIn: [Julia Oystrick](https://www.linkedin.com/in/julia-oystrick-9a00b8398/)
