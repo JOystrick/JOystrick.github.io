@@ -1092,9 +1092,6 @@ section:nth-child(even) {
         left: -1.5rem;
     }
 
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
 
     .hero-image-placeholder {
         width: 180px;
