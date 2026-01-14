@@ -108,8 +108,8 @@ body {
 }
 
 .hero-image-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
     display: flex;
@@ -117,6 +117,8 @@ body {
     justify-content: center;
     border: 4px solid rgba(255, 255, 255, 0.5);
     margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image-placeholder .initials {
@@ -125,11 +127,11 @@ body {
     color: white;
 }
 
-.hero-image-placeholder img {
+.hero-image {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .hero-title {
@@ -727,12 +729,8 @@ section {
     }
 
     .hero-image-placeholder {
-        width: 120px;
-        height: 120px;
-    }
-
-    .hero-image-placeholder .initials {
-        font-size: 2.5rem;
+        width: 150px;
+        height: 150px;
     }
 }
 
